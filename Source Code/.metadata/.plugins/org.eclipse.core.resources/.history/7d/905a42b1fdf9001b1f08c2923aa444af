@@ -15,23 +15,15 @@ public class LockedMe
 	{
 		//Variable declaration
 		int proceed = 1;
-		int choice = 0;
+		int choice;
 		
 		do
 		{			
 			welcomeScreen();
 			
-			try
-			{
 			//Read choice from user
 			System.out.println("Please enter your choice:");
 			choice = Integer.parseInt(scan.nextLine());
-			}
-			catch(Exception e)
-			{
-				System.out.println("Please enter valid choice between integer 1 to 5.\n");
-				continue;
-			}
 			
 			switch(choice)
 			{
