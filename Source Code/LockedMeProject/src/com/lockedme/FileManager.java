@@ -42,9 +42,11 @@ public class FileManager
 	{
 		try
 		{
+			//Creating file and file writer object
 			File file = new File(folderpath, fileName);
 			FileWriter fwrite = new FileWriter(file);
 			
+			//Writing to file
 			for(String s : content)
 				fwrite.write(s+"\n");
 			
@@ -65,9 +67,11 @@ public class FileManager
 	 */
 	public static boolean deleteFile(String folderpath, String fileName)
 	{
+		//Creating file object
 		File file = new File(folderpath+"\\"+fileName);
 		try
 		{
+			//Deleting file
 			if(file.delete())
 				return true;
 			else
@@ -87,8 +91,10 @@ public class FileManager
 	 */
 	public static boolean searchFile(String folderpath, String fileName)
 	{
+		//Creating file object
 		File file = new File(folderpath+"\\"+fileName);
 		
+		//Search condition
 		if(file.exists())
 			return true;
 		else
